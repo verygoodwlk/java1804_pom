@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML5
+dubbo:
+  application:
+    name: shop_back
+  registry:
+    address: zookeeper://192.168.226.130:2181
+  consumer:
+    check: false
+    timeout: 1000

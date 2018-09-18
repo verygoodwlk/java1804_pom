@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.qf.entity.Goods;
 import com.qf.service.IGoodsService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -16,11 +17,12 @@ public class GoodsController {
     private IGoodsService goodsService;
 
     @RequestMapping("/goodslist")
-    public String goodsManager(){
+    public String goodsManager(Model model){
 
         //通过service获得商品列表
         List<Goods> goods = goodsService.queryAll();
         System.out.println("查询的所有的商品：" + goods);
+        model.addAttribute("goods", goods);
 
         return "goodslist";
     }

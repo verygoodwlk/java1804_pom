@@ -46,7 +46,7 @@
         </div>
         <div class="border clearfix">
        <span class="l_f">
-        <a href="picture-add.html" title="添加商品" class="btn btn-warning Order_form"><i class="icon-plus"></i>添加商品</a>
+        <a th:href="${#request.getContextPath() + '/topage/goodsadd'}" title="添加商品" class="btn btn-warning Order_form"><i class="icon-plus"></i>添加商品</a>
         <a href="javascript:ovid()" class="btn btn-danger"><i class="icon-trash"></i>批量删除</a>
        </span>
             <span class="r_f">共：<b>2334</b>件商品</span>
@@ -84,7 +84,7 @@
                             <td width="25px"><label><input type="checkbox" class="ace" ><span class="lbl"></span></label></td>
                             <td width="80px" th:text="${good.id}">45631</td>
                             <td width="250px"><u style="cursor:pointer" class="text-primary" onclick="" th:text="${good.title}">小米 Max 全网通 高配版 3GB内存 64GB ROM 金色 移动联通电信4G手机Y</u></td>
-                            <td width="100px" th:text="${good.gimage}">5467</td>
+                            <td width="100px"><img th:src="${path + good.gimage}" width="200"/></td>
                             <td width="100px" th:text="${good.ginfo}">4525</td>
                             <td width="100px" th:text="${good.allprice}">法国</td>
                             <td width="180px" th:text="${good.price}">2014-6-11 11:11:42</td>

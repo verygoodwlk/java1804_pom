@@ -8,5 +8,13 @@
         select * from goods
     </select>
 
+    <insert id="addGoods" useGeneratedKeys="true" keyProperty="id">
+        insert into goods value(null, #{title}, #{ginfo}, #{gcount}, #{tid}, #{allprice}, #{price}, #{gimage})
+    </insert>
+
+    <select id="queryNew" resultType="goods">
+        select * from goods order by id desc limit 4
+    </select>
+
 </mapper>
 

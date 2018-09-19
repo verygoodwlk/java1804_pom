@@ -4,6 +4,9 @@ spring:
   thymeleaf:
     cache: false
     mode: HTML5
+  servlet:
+    multipart:
+      max-file-size: 5MB
 dubbo:
   application:
     name: shop_back
@@ -12,3 +15,14 @@ dubbo:
   consumer:
     check: false
     timeout: 1000
+fdfs:
+  so-timeout: 1000
+  thumb-image:
+    height: 200
+    width: 200
+  pool:
+    jmx-enabled: false
+  tracker-list:
+    - 192.168.226.130:22122
+image:
+  path: http://192.168.226.130/

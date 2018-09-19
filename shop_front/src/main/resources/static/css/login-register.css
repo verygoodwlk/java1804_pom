@@ -1,0 +1,64 @@
+/*顶部的CSS样式*/
+#topnav{width:100%;height:29px; background:whiteSmoke; border-bottom:1px solid #D8D8D8;}
+.topwrap{width:1000px; margin:0 auto; position:relative;}
+#topnav .user-entry{width:550px; height:20px;line-height:20px;padding:4px 0 5px 0;}
+#topnav .user-entry dt{float:left; margin-right:10px;}
+#topnav .user-entry dd{float:left;margin:0 3px;}
+#topnav a{color:#666; padding:0 3px;}
+#topnav a:hover{color:#c00;}
+
+#topnav .quick-menu{position:absolute; top:4px; right:0;}
+.quick-menu li{background:url("../images/nc_topbar.gif") no-repeat right -26px; float:left; position:relative;}
+.quick-menu .menu-hd{display:block;height:18px; line-height:18px;padding:0 22px 2px 10px;}
+.quick-menu .menu-bd{display:none;}
+
+/*主体部分*/
+.main{width:850px; margin:30px auto 0;}
+.login-form-left{width:450px; height:350px;}
+.login-form{width:400px;}
+.form-hd{background:#f9f9f9; border:#D8D8D8 solid;border-width:1px 1px 0 1px;}
+.form-hd h3{font-size:18px;line-height:20px;color:#555;padding:25px 0 15px 25px;font-weight:700;}
+.form-bd{background:#f9f9f9; border:#D8D8D8 solid;border-width:0 1px; padding:0 20px;}
+.form-ft{width:400px;height:40px; clear:both;background:url("../images/login_bg.png") no-repeat 0 -124px;}
+.form-bd dl{clear:both;padding:12px 0;}
+.form-bd dt{width:70px;float:left; text-align:right;font-size:14px;color:#777; margin-right:8px;padding:5px 0 0 0;}
+.form-bd .text{width:220px;height:20px;border:1px solid #bbb;padding:3px;color:#555;}
+.form-bd .submit{width:98px;height:34px;font-size:14px;font-weight:700;background:url("../images/login_bg.png") no-repeat 0 -56px;border:none;color:#fff; margin-right:8px;}
+.form-bd .submit:hover{background-position:0 -90px;}
+.form-bd .forget{color:#06c; font-weight:bold;}
+.form-bd .register{width:50px;height:26px; line-height:26px; background:url("../images/login_bg.png") no-repeat -98px -56px; display:inline-block;text-align:center;color:#444;font-weight:700;}
+.form-bd .register:hover{background-position:-98px -82px; color:#000; text-decoration:none;}
+
+.form-bd .other{border-top:dashed 1px #D8D8D8;padding:15px 0;}
+.form-bd .other p{}
+.form-bd .other a{width:78px;height:28px;display:inline-block;margin:10px 2px 0 0;}
+.form-bd .other .qq{background:url(../images/login_bg.png) no-repeat -88px 0;}
+.form-bd .other .sina{width:88px;background:url(../images/login_bg.png) no-repeat -166px 0;}
+.form-bd .other .qq:hover{background:url(../images/login_bg.png) no-repeat -88px -28px;}
+.form-bd .other .sina:hover{background:url(../images/login_bg.png) no-repeat -166px -28px;}
+
+/*底部*/
+.footer{color:#aaa; border-top:1px solid #E9ECEF; padding:15px 0; text-align:center;}
+.footer p{line-height:25px;}
+.footer a{color:#666; padding:0 5px;}
+
+
+/*注册表单左边部分*/
+.if{clear:both;border-top:dashed 1px #E7E7E7;margin:20px 30px 0 0;}
+.func dt,.if h2{font-size:18px;font-weight:700; line-height:30px;margin:20px 0 15px;}
+.func dd{width:200px; float:left; display:inline; height:48px; line-height:48px;font-size:14px; margin-bottom:15px;}
+
+.func dd i{display:inline-block; width:48px;height:48px; line-height:48px;background:url(../images/login_bg.png) no-repeat 0 0; vertical-align:middle; margin-right:10px;}
+.func dd.ico05 i{background-position:-305px -48px;}
+.func dd.ico01 i{background-position:-258px 0;}
+.func dd.ico03 i{background-position:-353px 0;}
+.func dd.ico02 i{background-position:-305px 0;}
+.func dd.ico06 i{background-position:-353px -48px;}
+.func dd.ico04 i{background-position:-258px -48px;}
+
+
+.if .register{width:50px;height:26px; line-height:26px; background:url("../images/login_bg.png") no-repeat -98px -56px; display:inline-block;text-align:center;color:#444;font-weight:700;}
+.if .register:hover{background-position:-98px -82px; color:#000; text-decoration:none;}
+.if .findpwd{color:#06c; font-weight:700;}
+
+

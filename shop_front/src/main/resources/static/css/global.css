@@ -1,0 +1,6 @@
+/*全站通用的CSS样式，如字体大小，颜色等*/
+body{font:12px/1 "微软雅黑", Tahoma, Helvetica, Arial, "宋体b8b\4f53", sans-serif; color:#333;}
+a{text-decoration:none;}
+a:hover{ color:#C00;text-decoration:underline;}
+.wrap1000{width:1000px; margin:10px auto 0;}
+.clear{clear:both;}

@@ -33,7 +33,7 @@ public class Goods implements Serializable{
     private String title;
     private String ginfo;
     private double gcount;
-    private Integer tid;
+    private Integer tid = 1;
     private double allprice;
     private double price;
     private String gimage;

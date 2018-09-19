@@ -1,0 +1,32 @@
+
+
+/* Goods CSS */
+.shop_goods_bd{width:1000px; margin:10px auto 10px;}
+
+.shop_goods_show{width:1000px; height:420px;}
+.shop_goods_show_left{float:left; width:350px; margin-right:10px;}
+
+.shop_goods_show_right{float:left; width:630px; position:relative; top:-21px; }
+.shop_goods_show_right ul{width:600px; padding:10px;}
+.shop_goods_show_right ul li{padding:0px 0; height:40px; line-height: 40px;}
+.shop_goods_show_right ul li label{width:100px; padding-right: 10px; text-align: right; float:left; height:40px; line-height:40px;}
+.shop_goods_show_right ul li span strong{font-weight:bold; font-size:18px; color:#FF3311; margin-right: 5px;}
+.shop_goods_show_right ul li input.good_nums{width:20px; padding:0 5px; height:20px; line-height:20px;}
+.shop_goods_show_right ul li a.goods_sub{float:left; overflow: hidden;  width:140px; height:40px; text-indent: 100em; margin-right: 10px; background:url('../images/public.png') no-repeat -100px top;}
+.shop_goods_show_right ul li a.goods_sub_gou{background-position:-250px top;}
+.shop_goods_show_right ul li.goods_num span a{display: inline-block; background:url('../images/public.png') left -60px; width:13px; height:13px; margin:0 5px; position: relative; top:2px; cursor: pointer;}
+.shop_goods_show_right ul li.goods_num span a.good_num_jian{}
+.shop_goods_show_right ul li.goods_num span a.good_num_jian:hover{background-position: -13px -60px;}
+.shop_goods_show_right ul li.goods_num span a.good_num_jia{background-position: -26px -60px;}
+.shop_goods_show_right ul li.goods_num span a.good_num_jia:hover{background-position: -39px -60px;}
+
+/* 商品详情 Tab */
+.shop_goods_bd_xiangqing{width:780px; border:1px solid #C6E6FD; float: right;}
+.shop_goods_bd_xiangqing_tab{width:780px; height:35px; line-height:35px; border-bottom: 1px solid #D8D8D8;}
+.shop_goods_bd_xiangqing_tab ul{width:780px; height:35px;}
+.shop_goods_bd_xiangqing_tab ul li{float:left;}
+.shop_goods_bd_xiangqing_tab ul li a{display: block; width:105px;  height:35px; line-height: 35px; text-align: center; font-size:14px; color:#777777; font-weight: 700; border-right:1px solid #DAEFFE;}
+.shop_goods_bd_xiangqing_tab ul li a:hover{text-decoration: none;}
+.shop_goods_bd_xiangqing_tab ul li.hover a{background-color:#F7FCFF; border-top:2px solid #F66C9D; height:34px; line-height: 34px; position: relative; top:0px;}
+.shop_goods_bd_xiangqing_content{width:760px; padding:10px;}
+.shop_goods_bd_xiangqing div.xiangqing_contents{display:block; width:760px;}

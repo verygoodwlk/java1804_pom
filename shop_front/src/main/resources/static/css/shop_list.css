@@ -1,0 +1,74 @@
+
+/**
+ * 商品列表 CSS
+ * wanglele
+ * 2013/03/27
+ */
+
+ /* List Body */
+ .shop_bd{width:1000px; margin: 10px auto 0;}
+
+ /* List Body Left */
+ .shop_bd_list_left{width:210px; float:left; }
+ .shop_bd_list_bk{width:195px; border:1px solid #D8D8D8; padding:5px; margin-bottom: 10px; margin-right:10px;}
+ .shop_bd_list_bk div.title{width:190px; font-size:14px; font-weight: bold; padding-left:5px; color:#3E3E3E; line-height: 33px; height:33px; border-bottom: 1px solid #E7E7E7;}
+ .shop_bd_list_bk div.contents{width:175px; padding:10px 10px 10px;}
+ .shop_bd_list_bk div.contents dl.shop_bd_list_type_links{width:175px;}
+ .shop_bd_list_bk div.contents dl.shop_bd_list_type_links dt{line-height:15px; height:15px; padding-bottom:8px;}
+ .shop_bd_list_bk div.contents dl.shop_bd_list_type_links dt strong{font-weight: bold; font-size:14px; color:#666666;}
+ .shop_bd_list_bk div.contents dl.shop_bd_list_type_links dd span{float:left; width:70px; line-height: 22px; padding-left:15px; background: url("../images/ico.gif") no-repeat scroll -20px 4px transparent;}
+ .shop_bd_list_bk div.contents dl.shop_bd_list_type_links dd span a{color:#555555;}
+
+ /* Hot Goods */
+ .shop_bd_list_bk div.contents ul li{width:175px; padding:10px 0; border-bottom: 1px dashed #E7E7E7;}
+ .shop_bd_list_bk div.contents ul li div.goods_name{width:175px; line-height:15px; height:30px; padding-bottom:5px;}
+ .shop_bd_list_bk div.contents ul li div.goods_name a{color:#555555;}
+ .shop_bd_list_bk div.contents ul li div.goods_name a:hover{color:#CC0000;}
+
+ .shop_bd_list_bk div.contents ul li div.goods_pic{width:168px; height:168px; margin: 0 auto; position: relative;}
+ .shop_bd_list_bk div.contents ul li div.goods_pic img{display: block; border:1px solid #E7E7E7; width:160px; height:160px;  padding:4px;}
+ .shop_bd_list_bk div.contents ul li div.goods_pic span.goods_price{width:150px; padding-left:10px; height:25px; line-height: 25px; color:#FFF; font-size:14px; font-weight: bold; background-color:#CC0000; display: block; position: absolute; bottom: 3px; left:5px;}
+.shop_bd_list_bk div.contents ul li div.goods_xiaoliang{clear: both; width:175px; height:30px;  margin-top:10px;}
+.shop_bd_list_bk div.contents ul li div.goods_xiaoliang span.goods_xiaoliang_link{float:right;}
+.shop_bd_list_bk div.contents ul li div.goods_xiaoliang span.goods_xiaoliang_link a{width:70px; height:28px; display: block; background:url("../images/group_bg.png") no-repeat scroll 0 -300px transparent; font-weight: 700; line-height: 28px; text-align: center; font-size: 14px;color:#FFF;}
+.shop_bd_list_bk div.contents ul li div.goods_xiaoliang span.goods_xiaoliang_nums{float:left; hieght:30px; line-height: 30px; width:100px;}
+.shop_bd_list_bk div.contents ul li div.goods_xiaoliang span.goods_xiaoliang_nums strong{font-weight: bold; font-size:14px; color:#CC0000;}
+
+/* List Body Right */
+.shop_bd_list_right{width:778px;  float:right;}
+
+.module_filter{border:1px solid #FFCC44; width:778px; padding:20px 0; background:url('../images/module_filter_line.gif') repeat-x left 2px;}
+.module_filter_line dl{width:700px; height:25px; margin:0 auto; padding:5px 28px; border-bottom:1px solid #EEEEEE;}
+.module_filter_line dl dt{float:left; height:25px; line-height: 25px;}
+.module_filter_line dl dd{float:left; height:25px; line-height: 25px;}
+.module_filter_line dl dd a{margin:0 15px; color:#0063DC;}
+.sort-bar{width:780px; height:38px; margin:10px auto 0; border:1px solid #D8D8D8; background-color:#F7F7F7;}
+.sort-bar .bar-l{width:500px; float: left;}
+.sort-bar .bar-l .switch{float:left; border-radius: 1px dotted #D8D8D8; margin:4px 0; padding:4px 10px 4px 8px; width:95px; height:20px; line-height: 20px;}
+.sort-bar .bar-l .switch span{display: inline-block; width:30px; height:20px; background:#F7F7F7 url('../images/nc_sortbar.gif') no-repeat 4px -14px; padding-left:15px; border:1px solid #D0D0D0;}
+.sort-bar .bar-l .switch span a{color:#777777;}
+.sort-bar .bar-l .switch span.selected{background:#FFF url('../images/nc_sortbar.gif') no-repeat 4px -34px; }
+.sort-bar .bar-l ul.array{width:250px; float: left; height:38px; line-height: 38px;}
+.sort-bar .bar-l ul.array li{float:left; height:38px; line-height: 38px; margin:0 10px; }
+.sort-bar .bar-l ul.array li a{color:#555555;}
+.sort-bar .bar-l ul.array li.selected a{color:#FF6600; font-weight: bold;}
+.sort-bar .bar-l div.prices{float: left; height:20px; padding-top:8px; color:#777777;}
+
+.shop_bd_list_content{width:780px; margin:0 auto;}
+.shop_bd_list_content ul li{width:195px; float:left; margin:10px 0;}
+.shop_bd_list_content ul li dl{width:175px; margin:0 auto; padding:10px 0;}
+.shop_bd_list_content ul li dl dt img{display: block; width:160px; height:160px; padding:4px; border:1px solid #E7E7E7;}
+.shop_bd_list_content ul li dl dd.title{line-height:18px; padding:10px 0;}
+.shop_bd_list_content ul li dl dd.title a{color:#3366CC;}
+
+.shop_bd_list_content ul li dl dd.content{height:25px; line-height: 25px;}
+.shop_bd_list_content ul li dl dd.content span.goods_jiage{float: left;}
+.shop_bd_list_content ul li dl dd.content span.goods_jiage strong{font-size:15px; color:#FF3300; font-weight: bold;}
+.shop_bd_list_content ul li dl dd.content span.goods_chengjiao{float:right;}
+
+/* Page */
+.pagination{width:100%; margin:10px auto;}
+.pagination ul{float:right}
+.pagination ul li{float:left; margin:0 3px;}
+.pagination ul li span{display: inline-block; padding:5px 5px; border:1px solid #CCCCCC; color:#999999;}
+.pagination ul li span.currentpage{background-color:#FEA900; color:#FFF; font-weight: bold; border-color:#FEA900;}

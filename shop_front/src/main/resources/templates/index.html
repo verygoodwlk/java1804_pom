@@ -105,9 +105,9 @@
             </ul>
             <div class="clear"></div>
             <div class="search_form">
-                <form method="post" action="index.php">
+                <form method="post" action="http://localhost:8082/solr/query">
                     <div class="search_formstyle">
-                        <input type="text" class="search_form_text" name="search_content" value="搜索其实很简单！" />
+                        <input type="text" class="search_form_text" name="keyword" placeholder="搜索其实很简单！" value="" />
                         <input type="submit" class="search_form_sub" name="secrch_submit" value="" title="搜索" />
                     </div>
                 </form>
@@ -362,7 +362,7 @@
                         $.ajax({
                             url:"http://localhost:8080/goods/querynew",
                             success:function(data){
-                                alert(data);
+                                // alert(data);
                             },
                             dataType:"text"
                         });

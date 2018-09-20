@@ -1,0 +1,15 @@
+/**
+ * shop_form.css
+ * wanglele
+ * 2013/05/04 09:13
+ */
+
+ .bn{border:none!important;}
+
+ form.shop_form{width:100%; margin:20px 0;}
+ form.shop_form ul{width:500px; margin-left:30px;}
+ form.shop_form ul li{clear:both; height:25px;width:100%; padding:10px 0; line-height: 25px; border-bottom: 1px solid #ccc;}
+ form.shop_form ul li label{float: left; width:80px; height:25px; text-align: right; line-height:25px; padding-right:10px;}
+ form.shop_form ul li label span{font-size:14px; color:#f00; font-weight: bold; position: relative; top:3px; right:3px;}
+ form.shop_form input.form-text{width:150px; height:25px; line-height:25px; padding:0 5px;}
+ form.shop_form input.form-submit{width:100px; height:30px;}

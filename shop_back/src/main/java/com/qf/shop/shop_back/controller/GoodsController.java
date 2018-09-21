@@ -80,6 +80,7 @@ public class GoodsController {
         //传参：id
         //传参：对象json
         HttpClientUtil.sendJsonPost("http://localhost:8082/solr/add", new Gson().toJson(goods));
+        HttpClientUtil.sendJsonPost("http://localhost:8083/item/createhtml", new Gson().toJson(goods));
 
         return "redirect:/goods/goodslist";
     }

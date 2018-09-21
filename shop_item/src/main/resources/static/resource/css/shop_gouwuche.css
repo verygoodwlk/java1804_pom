@@ -1,0 +1,50 @@
+
+/*
+ *	gouwuche CSS
+ *	wll 2013/03/29
+ */
+
+/* body css  (wll-2013/03/29) */
+ .shop_gwc_bd{width:1000px;  margin:10px auto 0; }
+
+ .shop_gwc_bd_contents{width:1000px; margin:0 auto;}
+
+ .shop_gwc_bd_contents_lc{width:1000px; margin:0 auto; height:90px; overflow: hidden; border-top:3px solid #FF6600; border-bottom:1px solid #E7E7E7; }
+ .shop_gwc_bd_contents_lc ul{width:990px; height:90px; margin:0 auto;}
+ .shop_gwc_bd_contents_lc ul li{float:left; width:330px; margin-top:20px; background:url('../images/step_chart.png') no-repeat left top; height:50px; overflow: hidden; line-height: 50px; text-indent: 50em;}
+ .shop_gwc_bd_contents_lc ul li.step_a{background-position:left -50px;}
+ .shop_gwc_bd_contents_lc ul li.step_b{background-position:left -150px;}
+ .shop_gwc_bd_contents_lc ul li.step_c{background-position:left -250px;}
+
+ .shop_gwc_bd_contents_lc ul li.hover_a{background-position:left 0px;}
+ .shop_gwc_bd_contents_lc ul li.hover_b{background-position:left -100px;}
+
+ .shop_gwc_bd_contents table{width:1000px; margin-top:10px;}
+ .shop_gwc_bd_contents table thead th{height:35px; line-height:23px; text-align: center; border-bottom: 2px solid #B2D1FF;}
+ .shop_gwc_bd_contents table tbody td{height:65px; padding:10px; text-align:center; background-color:#FAFCFF; border-bottom:1px dotted #84B3FD;}
+.shop_gwc_bd_contents table tbody td.gwc_list_title{font-weight: bold; text-align: left;}
+.shop_gwc_bd_contents table tbody td.gwc_list_pic{width:65px;}
+.shop_gwc_bd_contents table tbody td a{color:#3366D4;}
+.shop_gwc_bd_contents table tbody td.gwc_list_danjia{width:100px;}
+.shop_gwc_bd_contents table tbody td.gwc_list_shuliang{width:100px;}
+.shop_gwc_bd_contents table tbody td.gwc_list_shuliang input{width:20px; height:20px; line-height: 20px; padding:0 3px;}
+.shop_gwc_bd_contents table tbody td.gwc_list_shuliang span a{display: inline-block; width:14px; height:14px; font-size:14px; font-weight: 800; background-color:#BDBDBD; color:#FFF; line-height: 14px; margin:0 3px; position: relative; top:2px; border-radius:2px; text-decoration: none;}
+.shop_gwc_bd_contents table tbody td.gwc_list_shuliang span a:hover{background-color:#FF9900;}
+
+.shop_gwc_bd_contents table tbody td.gwc_list_xiaoji{width:100px;}
+.shop_gwc_bd_contents table tbody td.gwc_list_xiaoji strong{font-weight: bold; color:#FF3334;}
+.shop_gwc_bd_contents table tbody td.gwc_list_caozuo{width:100px;}
+.shop_gwc_bd_contents table tbody td.gwc_list_caozuo a{margin:0 10px;}
+
+.shop_gwc_bd_contents table tfoot td{width:100%; text-align: right; padding:10px 0;}
+.shop_gwc_bd_contents table tfoot td div.gwc_foot_zongjia{color:#777; height:30px; line-height: 30px;}
+.shop_gwc_bd_contents table tfoot td div.gwc_foot_zongjia span strong{font-size:16px; font-weight: bold; color:#FF3300; padding-right:10px;}
+
+.shop_gwc_bd_contents table tfoot td div.gwc_foot_links a.op{ background: none repeat scroll 0 0 #FE8502; border: 1px solid #FF6633; border-radius: 5px 5px 5px 5px; color: #FFFFFF !important; display: inline-block; font-size: 14px; font-weight: 600; height: 24px; line-height: 24px; padding: 4px 12px;}
+.shop_gwc_bd_contents table tfoot td div.gwc_foot_links a.go{font-size: 14px;font-weight: 600;line-height: 24px;color: #555;background: #FBFBFB;display: inline-block;height: 24px;padding: 4px 12px;border: solid 1px #E7E7E7;border-radius: 5px;}
+.shop_gwc_bd_contents table tfoot td div.gwc_foot_links a.op:hover{text-decoration: none; background-color:#FF6600;}
+.shop_gwc_bd_contents table tfoot td div.gwc_foot_links a.go:hover{text-decoration: none; background-color:#F1F1F1;}
+
+/*补充- 购物车为空 的css */
+.empty_cart{width:998px; height:98px; border:1px solid #ddd;border-radius:4px;}
+.empty_cart .message{height:98px; padding-left:411px; background:#f3f3f3 url('../images/cart-empty-bg.png') no-repeat 321px 20px; line-height:98px;}

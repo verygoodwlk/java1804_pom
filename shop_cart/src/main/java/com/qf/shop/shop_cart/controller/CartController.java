@@ -17,6 +17,7 @@ public class CartController {
     @IsLogin
     @RequestMapping("/addcart")
     public String addCart(Cart cart, User user){
+
         System.out.println("添加购物车：" + cart);
         System.out.println("是否登录：" + user);
         //判断当前是否登录

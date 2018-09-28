@@ -281,9 +281,22 @@
                 </li>
                 <li style="padding:20px 0;">
                     <label>&nbsp;</label>
-                    <span><a href="" class="goods_sub goods_sub_gou" >加入购物车</a></span>
+                    <span><a href="javascript:addCart();" class="goods_sub goods_sub_gou" >加入购物车</a></span>
                 </li>
             </ul>
+
+            <script type="text/javascript">
+                //添加购物车
+                function addCart(){
+                    //商品的id
+                    var gid = ${goods.id};
+                    //商品的数量
+                    var gnumber = $("#good_nums").val();
+
+                    location.href = "http://localhost:8085/cart/addcart?gid=" + gid + "&gnumber=" + gnumber;
+                }
+
+            </script>
         </div>
     </div>
     <!-- 商品展示 End -->

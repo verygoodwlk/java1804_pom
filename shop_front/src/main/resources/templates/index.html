@@ -12,23 +12,8 @@
     <script type="text/javascript" src="js/topNav.js" ></script>
     <script type="text/javascript" src="js/focus.js" ></script>
     <script type="text/javascript" src="js/shop_home_tab.js" ></script>
+    <script type="text/javascript" src="http://localhost:8084/js/login.js"></script>
 
-    <script >
-        //ajax进行登录认证 -
-        $(function(){
-            $.ajax({
-                url:"http://localhost:8084/sso/islogin",
-                dataType:"jsonp"
-            });
-        })
-
-        function callback(data){
-            if(data != null){
-                $("#pid").html(data.name + "您好，欢迎来到<b>ShopCZ商城</b>&nbsp;&nbsp; <a href=\"http://localhost:8084/sso/logout\">注销</a>");
-            }
-        }
-
-    </script>
 </head>
 <body>
 <!-- Header  -wll-2013/03/24 -->
@@ -39,7 +24,6 @@
             <!-- Header TopNav Left -->
             <div class="shop_hd_topNav_all_left">
                 <p id="pid">
-                    [<a href="http://localhost:8084/sso/tologin">登录</a>][<a href="">注册</a>]
                 </p>
             </div>
             <!-- Header TopNav Left End -->
@@ -124,10 +108,10 @@
             </ul>
             <div class="clear"></div>
             <div class="search_form">
-                <form method="post" action="http://localhost:8082/solr/query">
+                <form method="get" action="http://localhost:8082/solr/query">
                     <div class="search_formstyle">
                         <input type="text" class="search_form_text" name="keyword" placeholder="搜索其实很简单！" value="" />
-                        <input type="submit" class="search_form_sub" name="secrch_submit" value="" title="搜索" />
+                        <input type="submit" class="search_form_sub" title="搜索" />
                     </div>
                 </form>
             </div>

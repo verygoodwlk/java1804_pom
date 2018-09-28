@@ -4,16 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.qf.shop</groupId>
-	<artifactId>java1804_pom</artifactId>
+	<artifactId>shop_cart</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<modules>
-		<module>shop_service_api</module>
-		<module>shop_entity</module>
-		<module>shop_dao</module>
-	</modules>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<name>java1804_pom</name>
+	<name>shop_cart</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -29,13 +24,37 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<!--<dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-	</dependencies>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.qf.shop</groupId>
+			<artifactId>shop_service_api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 
 </project>

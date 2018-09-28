@@ -34,7 +34,8 @@ public class SSOController {
      * @return
      */
     @RequestMapping("/tologin")
-    public String toLogin(){
+    public String toLogin(String returnUrl, Model model){
+        model.addAttribute("returnUrl", returnUrl);
         return "login";
     }
 
@@ -43,13 +44,17 @@ public class SSOController {
      * @return
      */
     @RequestMapping("/login")
-    public String login(String username, String password, Model model, HttpServletResponse response){
+    public String login(String username, String password, Model model, HttpServletResponse response, String returnUrl){
 
         ResultData<User> data = userService.login(username, password);
-        System.out.println("-->" + data);
         switch (data.getCode()){
             case 0:
                 //登录成功的处理
+                if(returnUrl == null || returnUrl.equals("")){
+                    returnUrl = "http://localhost:8081";
+                } else {
+                    returnUrl = returnUrl.replace("*", "&");
+                }
 
                 //1、生成uuid
                 String token = UUID.randomUUID().toString();
@@ -63,7 +68,7 @@ public class SSOController {
 //                cookie.setDomain(".shop.com");
                 response.addCookie(cookie);
 
-                return "redirect:http://localhost:8081";
+                return "redirect:" + returnUrl;
             default:
                 //登录失败 - 回到登录页面
                 model.addAttribute("data", data);
@@ -78,14 +83,12 @@ public class SSOController {
     @RequestMapping("/islogin")
     @ResponseBody
     public String isLogin(@CookieValue(value = "login_token", required = false) String login_token){
-        System.out.println("-->"+ login_token);
         //1、cookie - login_token - uuid
         //2、uuid - redis - user
         User user = null;
         if(login_token != null){
             user = (User) redisTemplate.opsForValue().get(login_token);
         }
-        System.out.println("-->    123" + user);
         return "callback(" + new Gson().toJson(user) + ")";
     }
 

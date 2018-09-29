@@ -1,0 +1,52 @@
+
+/**
+ * 个人中心 CSS
+ * wll-2013/03/29
+ */
+
+ .shop_member_bd{width:1000px; margin:10px auto 0px;}
+
+ .shop_member_bd_left{float:left; width:130px; padding:10px; border:1px solid #D5E5F5; margin-right: 10px; background-color:#F4F7FB;}
+ .shop_member_bd_left_pic{width:100px; height:100px; margin:15px auto; padding:2px; background-color:#F4F7FB;}
+ .shop_member_bd_left_pic img{ width:100px; height:100px; border:1px solid #C9E0E7;border-radius:5px; background-color:#F4F7FB;}
+ .shop_member_bd_left dl{border-bottom:1px solid #D5E5F5; box-shadow:0 1px 0 #FFFFFF; padding-bottom:10px; margin-bottom:10px;}
+ .shop_member_bd_left dl dt{float-size:16px; font-weight: bold; line-height:30px; height:30px; }
+ .shop_member_bd_left dl dd{padding-left:10px; height:25px; line-height: 25px; background:url("../images/ncus_public.png") no-repeat scroll 0 -330px transparent;}
+ .shop_member_bd_left dl dd a{color:#455E65;}
+ .shop_member_bd_left dl dd a:hover{color:#7FB8D2;}
+
+ .shop_member_bd_right{float:left; width:835px; padding-bottom: 10px; border:1px solid #D5E5F5;}
+ .shop_meber_bd_good_lists{width:835px; margin:0 auto;}
+ .shop_meber_bd_good_lists div.title{width:800px; padding-left:15px; font-size: 14px; margin:0 auto; border-bottom:1px solid #AED2FF; line-height: 30px; height:30px;}
+ .shop_meber_bd_good_lists div.title h3{font-weight:700; }
+
+ .shop_meber_bd_good_lists table{width:815px; margin:10px auto 0;}
+ .shop_meber_bd_good_lists table thead.tab_title th{height:30px; background:url("../images/ncus_repeat_x.png") repeat-x scroll center -40px transparent; line-height:30px; text-align: center; border:1px solid #AED2FF; border-left:none; border-right:none;}
+
+ .shop_meber_bd_good_lists table tbody table.good{width:815px; height:120px; border:1px solid #C4D5E0; margin-top:10px;}
+ .shop_meber_bd_good_lists table tbody table.good thead tr th{height:25px;  line-height:25px; padding-left:15px; background-color:#EDF5FF; color:#339900;}
+ .shop_meber_bd_good_lists table tbody table.good thead tr th strong{color:#333333;}
+ .shop_meber_bd_good_lists table tbody table.good tr td{border:1px solid #C4D5E0;}
+
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_pic{width:80px; text-align: center;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_pic img{width:60px; height:60px; display: inline-block; border:1px solid #E7E7E7;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_title{line-height: 22px; color:#999999; width:310px; padding:0 10px;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_title a{color:#0579C6;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_danjia{width:100px; text-align: center;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_shuliang{width:80px; text-align: center;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_zongjia{width:100px; line-height:18px; color:#999999; text-align: center;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.dingdan_zongjia strong{color:#FF6600; font-weight:700; font-size:14px;}
+ 
+ td.pingjia_pic span.pingjia_type{width:24px; height:24px; display:block; margin:0 auto; background:url("../images/credit_smile.png") no-repeat scroll 0 0 transparent;}
+ td.pingjia_pic span.pingjia_type_2{background-position:0 -30px;}
+ td.pingjia_pic span.pingjia_type_3{background-position:0 -60px;}
+ td.pingjia_pic{width:80px; text-align:center;}
+ td.pingjia_title{width:340px; padding-left:15px;text-align:left; line-height:20px;}
+ td.pingjia_danjia{width:150px;text-align:center; line-height:20px;}
+ td.pingjia_shuliang{width:150px;text-align:center; line-height:20px;}
+ td.pingjia_caozuo{width:80px;text-align:center;}
+  
+
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.digndan_caozuo{width:115px; text-align: center;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.digndan_caozuo a{color:#7466CC;}
+ .shop_meber_bd_good_lists table tbody table.good tbody tr td.digndan_caozuo a:hover{color:#FF542F;}

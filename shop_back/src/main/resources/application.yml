@@ -12,6 +12,7 @@ dubbo:
     name: shop_back
   registry:
     address: zookeeper://192.168.226.130:2181
+    check: false
   consumer:
     check: false
     timeout: 1000

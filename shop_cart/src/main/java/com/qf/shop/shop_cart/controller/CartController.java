@@ -4,13 +4,13 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.qf.entity.Cart;
-import com.qf.entity.Goods;
 import com.qf.entity.User;
 import com.qf.service.ICartService;
 import com.qf.service.IGoodsService;
 import com.qf.util.Constact;
 import com.qf.util.IsLogin;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -110,25 +110,21 @@ public class CartController {
     @RequestMapping("/getcarts")
     @ResponseBody
     public String getCarts(@CookieValue(value = "cart_token", required = false) String carts, User user){
+        List<Cart> cartsList = cartService.getCarts(user, carts);
+        return "getCart(" + new Gson().toJson(cartsList) + ")";
+    }
 
-        List<Cart> cartList = null;
-
-        if(user != null){
-            //从数据库中获得购物车的数据
-            cartList = cartService.queryAllByUid(user.getId());
-        } else {
-            //从cookie中获得购物车的数据
-            TypeToken<List<Cart>> tt = new TypeToken<List<Cart>>(){};
-            cartList = new Gson().fromJson(carts, tt.getType());
-        }
-
-        if(cartList != null) {
-            for (int i = 0; i < cartList.size(); i++) {
-                Goods goods = goodsService.queryById(cartList.get(i).getGid());
-                cartList.get(i).setGoods(goods);
-            }
-        }
-
-        return "getCart(" + new Gson().toJson(cartList) + ")";
+    /**
+     * 去购物车列表
+     * @return
+     */
+    @IsLogin
+    @RequestMapping("/cartlist")
+    public String cartList(@CookieValue(value = "cart_token", required = false) String carts,
+                           User user,
+                           Model model){
+        List<Cart> cartsList = cartService.getCarts(user, carts);
+        model.addAttribute("carts", cartsList);
+        return "cartlist";
     }
 }

@@ -21,5 +21,12 @@
         delete from shopcart where uid = #{id}
     </delete>
 
+    <select id="queryCartByGids" resultType="cart">
+      select * from shopcart where uid = #{uid} and gid in
+      <foreach collection="gid" item="gid2" open="(" close=")" separator=",">
+          #{gid2}
+      </foreach>
+    </select>
+
 </mapper>
 

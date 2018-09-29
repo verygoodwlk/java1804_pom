@@ -1,0 +1,11 @@
+/* ShopNC Header CSS wll-2013/3/24 */
+.shop_hd{width:100%;}
+.shop_hd_topNav{width:100%;height:29px; background-color:#F5F5F5; border-bottom:1px solid #D8D8D8; }
+.shop_hd_topNav_all{width:1000px; margin:0 auto;}
+
+.shop_hd_topNav_all_left{float:left; height:20px; width:550px; padding:4px 0 5px; line-height:20px; margin:0; overflow:hidden;}
+.shop_hd_topNav_all_left a{margin:0 4px; color:#666666;}
+.shop_hd_topNav_all_left a:hover{color:#FF3300;}
+
+.shop_hd_topNav_all_right{float:left;}
+

@@ -57,7 +57,7 @@ public class LoginAop {
         //判断是否需要跳转到登录页页面 - 有些方法可能需要强制登录
         if(user == null && islogin.tologin()){
             String returnUrl = request.getRequestURL() + "?" + request.getQueryString();
-            System.out.println("--->" + returnUrl);
+            returnUrl = returnUrl.replace("&", "*");
             return "redirect:http://localhost:8084/sso/tologin?returnUrl=" + returnUrl;
         }
 

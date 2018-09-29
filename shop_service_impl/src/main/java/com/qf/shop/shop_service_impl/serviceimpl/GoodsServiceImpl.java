@@ -30,4 +30,9 @@ public class GoodsServiceImpl implements IGoodsService {
     public List<Goods> queryNew() {
         return goodsDao.queryNew();
     }
+
+    @Override
+    public Goods queryById(Integer id) {
+        return goodsDao.queryById(id);
+    }
 }

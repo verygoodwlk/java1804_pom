@@ -58,18 +58,39 @@
 
                     <li>
                         <div class="topNav_menu">
-                            <a href="#" class="topNavHover">购物车<b>0</b>种商品<i></i></a>
-                            <div class="topNav_menu_bd" style="display:none;">
-                                <!--
-                                <ul>
-                                  <li><a title="已售出的商品" target="_top" href="#">已售出的商品</a></li>
-                                  <li><a title="销售中的商品" target="_top" href="#">销售中的商品</a></li>
-                                </ul>
-                                -->
+                            <a href="#" class="topNavHover">购物车<b id="cnumber">0</b>种商品<i></i></a>
+                            <div id="cartsid" class="topNav_menu_bd" style="display:none;">
                                 <p>还没有商品，赶快去挑选！</p>
                             </div>
                         </div>
                     </li>
+
+                    <script>
+                        $(function(){
+                            $.ajax({
+                                url:"http://localhost:8085/cart/getcarts",
+                                dataType:"jsonp"
+                            });
+                        })
+
+                        function getCart(data){
+                            if(data.length > 0){
+                                $("#cnumber").html(data.length);
+
+                                var html = "<ul>";
+                                for(var i = 0; i < data.length; i++){
+                                    html += "<li>";
+                                    html += "<p>";
+                                    html += "<img width='50' src='http://192.168.226.130/" + data[i].goods.gimage + "'/>";
+                                    html += "<span>" + data[i].goods.title + "</span>";
+                                    html += "</p>";
+                                    html += "</li>";
+                                }
+                                html += "</ul>";
+                                $("#cartsid").html(html);
+                            }
+                        }
+                    </script>
 
                     <li>
                         <div class="topNav_menu">

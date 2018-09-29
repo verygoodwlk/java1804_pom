@@ -5,11 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @Setter
 @Getter
 @ToString
 @EqualsAndHashCode
-public class Cart {
+public class Cart implements Serializable{
 
     private Integer id;
     private Integer gid;//商品id

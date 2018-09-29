@@ -6,6 +6,7 @@ import com.qf.entity.ResultData;
 import com.qf.entity.User;
 import com.qf.service.IUserService;
 import com.qf.util.Constact;
+import com.qf.util.HttpClientUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -44,7 +49,12 @@ public class SSOController {
      * @return
      */
     @RequestMapping("/login")
-    public String login(String username, String password, Model model, HttpServletResponse response, String returnUrl){
+    public String login(String username,
+                        String password,
+                        Model model,
+                        HttpServletResponse response,
+                        String returnUrl,
+                        @CookieValue(value = "cart_token", required = false) String carts){
 
         ResultData<User> data = userService.login(username, password);
         switch (data.getCode()){
@@ -67,6 +77,30 @@ public class SSOController {
                 cookie.setPath("/");
 //                cookie.setDomain(".shop.com");
                 response.addCookie(cookie);
+
+                //4、登录成功进行购物车的合并
+                if(carts != null){
+                    Map<String, String> params = new HashMap<>();
+                    params.put("uid", data.getData().getId() + "");
+
+                    Map<String, String> header = new HashMap<>();
+                    try {
+                        header.put("Cookie", "cart_token=" + URLEncoder.encode(carts, "utf-8"));
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+
+                    String result = HttpClientUtil.sendPostParamsAndHeader("http://localhost:8085/cart/hebing", params, header);
+                    System.out.println("--->" + result);
+                    if(result.equals("succ")){
+                        //清空临时购物车
+                        Cookie cookie1 = new Cookie(Constact.CART_TOKEN, null);
+                        cookie1.setMaxAge(0);
+                        cookie1.setPath("/");
+                        response.addCookie(cookie1);
+                    }
+                }
+
 
                 return "redirect:" + returnUrl;
             default:

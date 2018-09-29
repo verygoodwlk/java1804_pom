@@ -66,7 +66,7 @@ public class LoginAop {
         //已经登录
         //获得目标方法的实参列表
         for(int i = 0; i < args.length; i++){
-            if(args[i].getClass()==User.class){
+            if(args[i] != null && args[i].getClass()==User.class){
                 args[i] = user;
             }
         }

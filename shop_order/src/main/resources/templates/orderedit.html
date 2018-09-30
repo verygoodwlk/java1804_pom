@@ -351,7 +351,6 @@
                         traditional:true,
                         data:{aid:aid, cid:array},
                         success:function(data){
-                            alert("data:" + data);
                             if(data != null){
                                 location.href = "http://localhost:8087/pay/alipay?orderid=" + data;
                             }

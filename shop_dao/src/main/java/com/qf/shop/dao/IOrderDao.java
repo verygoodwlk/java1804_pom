@@ -15,5 +15,9 @@ public interface IOrderDao {
 
     List<Orders> queryByUid(Integer uid);
 
+    Orders queryByOrderId(String orderid);
+
+    int updateStatusByOrderId(@Param("orderid") String orderid, @Param("status") int status);
+
 
 }

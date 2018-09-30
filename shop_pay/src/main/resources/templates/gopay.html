@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:inline="javascript">
+        window.onload = function(){
+            window.open("http://localhost:8087/pay/goalipay?orderid=" + [[${orderid}]],"_blank");
+        }
+
+        function payok(){
+            location.href = "http://localhost:8087/pay/isok?orderid=" + [[${orderid}]];
+        }
+    </script>
+</head>
+<body >
+    <h1>正在支付</h1>
+    <button onclick="payok();">支付已经完成</button>
+    <button>支付遇到问题？</button>
+</body>
+</html>

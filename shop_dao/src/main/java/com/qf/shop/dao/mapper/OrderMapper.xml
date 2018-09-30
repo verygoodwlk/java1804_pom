@@ -43,5 +43,13 @@
        select *, od.id as odid from orders o join orderdetils od on o.id = od.oid where o.uid = #{uid}
     </select>
 
+    <select id="queryByOrderId" resultType="orders">
+        select * from orders where orderid = #{orderid}
+    </select>
+
+    <update id="updateStatusByOrderId">
+        update orders set status = #{status} where orderid = #{orderid}
+    </update>
+
 </mapper>
 

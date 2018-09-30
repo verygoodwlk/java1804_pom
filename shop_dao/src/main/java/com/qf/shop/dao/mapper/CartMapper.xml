@@ -4,6 +4,20 @@
 <!-- 采购的映射文件 -->
 <mapper namespace="com.qf.shop.dao.ICartDao">
 
+    <resultMap id="CartMap" type="cart">
+        <id property="id" column="id"/>
+        <result property="gid" column="gid"/>
+        <result property="gnumber" column="gnumber"/>
+        <result property="uid" column="uid"/>
+
+        <association property="goods" javaType="goods">
+            <id property="id" column="gid"/>
+            <result property="title" column="title"/>
+            <result property="ginfo" column="ginfo"/>
+            <result property="price" column="price"/>
+            <result property="gimage" column="gimage"/>
+        </association>
+    </resultMap>
 
     <insert id="addCart">
         insert into shopcart value(null, #{gid}, #{gnumber}, #{uid})
@@ -26,6 +40,13 @@
       <foreach collection="gid" item="gid2" open="(" close=")" separator=",">
           #{gid2}
       </foreach>
+    </select>
+
+    <select id="queryByCids" resultMap="CartMap">
+        select * from shopcart sc join goods g on sc.gid = g.id where sc.id in
+        <foreach collection="cids" item="cid" open="(" close=")" separator=",">
+            #{cid}
+        </foreach>
     </select>
 
 </mapper>

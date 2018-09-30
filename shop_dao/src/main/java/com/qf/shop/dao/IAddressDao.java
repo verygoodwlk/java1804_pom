@@ -9,4 +9,6 @@ public interface IAddressDao {
     List<Address> queryByUid(Integer uid);
 
     int addAddress(Address address);
+
+    Address queryById(Integer aid);
 }

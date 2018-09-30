@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 采购的映射文件 -->
+<mapper namespace="com.qf.shop.dao.IOrderDao">
+
+    <resultMap id="OrderMapper" type="orders">
+        <id property="id" column="id"/>
+        <result property="orderid" column="orderid"/>
+        <result property="uid" column="uid"/>
+        <result property="person" column="person"/>
+        <result property="address" column="address"/>
+        <result property="phone" column="phone"/>
+        <result property="code" column="code"/>
+        <result property="oprice" column="oprice"/>
+        <result property="status" column="status"/>
+        <result property="ordertime" column="ordertime"/>
+
+        <collection property="ods" ofType="orderDetils">
+            <id property="id" column="odid"/>
+            <result property="oid" column="oid"/>
+            <result property="gid" column="gid"/>
+            <result property="gname" column="gname"/>
+            <result property="ginfo" column="ginfo"/>
+            <result property="price" column="price"/>
+            <result property="gcount" column="gcount"/>
+            <result property="gimage" column="gimage"/>
+        </collection>
+    </resultMap>
+
+   <insert id="addOrder" useGeneratedKeys="true" keyProperty="id">
+       insert into orders value(null, #{orderid}, #{uid}, #{person}, #{address}, #{phone}, #{code}, #{oprice}, #{status}, #{ordertime});
+   </insert>
+
+   <insert id="addOrderDetils">
+       insert into orderdetils values
+       <foreach collection="orderdetils" item="orderd" separator=",">
+           (null, #{orderd.oid}, #{orderd.gid}, #{orderd.gname}, #{orderd.ginfo}, #{orderd.price}, #{orderd.gcount}, #{orderd.gimage})
+       </foreach>
+   </insert>
+
+    <select id="queryByUid" resultMap="OrderMapper">
+       select *, od.id as odid from orders o join orderdetils od on o.id = od.oid where o.uid = #{uid}
+    </select>
+
+</mapper>
+

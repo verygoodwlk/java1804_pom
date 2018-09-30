@@ -12,5 +12,9 @@
         {call addAddress(#{person}, #{address}, #{phone}, #{code}, #{uid}, #{isdefault})}
     </insert>
 
+    <select id="queryById" resultType="address">
+        select * from address where id = #{id}
+    </select>
+
 </mapper>
 

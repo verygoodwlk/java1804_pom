@@ -16,4 +16,6 @@ public interface ICartDao {
     int deleteAllCart(Integer uid);
 
     List<Cart> queryCartByGids(@Param("gid") Integer[] gid, @Param("uid") Integer uid);
+
+    List<Cart> queryByCids(@Param("cids") Integer[] cids);
 }

@@ -12,9 +12,20 @@
         update miaosha set save = save - #{number} where id = #{id} and save >= #{number}
     </update>
 
+    <update id="updateSaveNumber">
+        update miaosha set save = #{save} where id = #{id}
+    </update>
+
    <insert id="addOrder" useGeneratedKeys="true" keyProperty="id">
        insert into orders value(null, #{orderid}, #{uid}, #{person}, #{address}, #{phone}, #{code}, #{oprice}, #{status}, #{ordertime});
    </insert>
+
+    <insert id="addOrders">
+        insert into orders values
+        <foreach collection="orderslist" item="orders" separator=",">
+            (null, #{orders.orderid}, #{orders.uid}, #{orders.person}, #{orders.address}, #{orders.phone}, #{orders.code}, #{orders.oprice}, #{orders.status}, #{orders.ordertime})
+        </foreach>
+    </insert>
 
 
 </mapper>

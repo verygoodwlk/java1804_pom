@@ -13,7 +13,6 @@ import java.util.Date;
 import java.util.UUID;
 
 @Service
-@Primary
 public class KillLeguans2ServiceImpl implements IKillService {
 
     @Autowired
